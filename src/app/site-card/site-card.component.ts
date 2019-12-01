@@ -11,12 +11,21 @@ export class SiteCardComponent {
 
   public card = {
     avatarUrl: "https://www.infragistics.com/angular-demos/assets/images/card/avatars/mellow_d.jpg",
-    buttons: ["play album"],
-    content: `Far far away, behind the word mountains,
-      far from the countries Vokalia and Consonantia,
-      there live the blind texts.`,
+    links: [
+      { text: "google", url: "https://google.com/" },
+      { text: "reddit", url: "https://reddit.com/" },
+      { text: "google", url: "https://google.com/" },
+      { text: "reddit", url: "https://reddit.com/" },
+      { text: "google", url: "https://google.com/" },
+      { text: "reddit", url: "https://reddit.com/" }
+    ],
+    description: 'some description',
     imageUrl: "https://www.infragistics.com/angular-demos/assets/images/card/media/here_media.jpg",
-    subtitle: "by Mellow D",
-    title: "HERE"
+    subtitle: "Subtitle",
+    title: "Title"
   };
+
+  newTab(e) {
+    window.open(e.url);
+  }
 }
