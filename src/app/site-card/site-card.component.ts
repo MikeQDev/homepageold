@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-site-card',
@@ -9,6 +9,7 @@ export class SiteCardComponent {
 
   public horizontal = true;
 
+  @Input()
   public card = {
     avatarUrl: "https://www.infragistics.com/angular-demos/assets/images/card/avatars/mellow_d.jpg",
     links: [

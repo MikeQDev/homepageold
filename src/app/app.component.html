@@ -37,10 +37,8 @@
 </div>-->
 
 <div class="card-container">
-    <app-site-card></app-site-card>
-    <app-site-card></app-site-card>
-    <app-site-card></app-site-card>
-  </div>
+  <app-site-card *ngFor="let linkCard of linkCards" [card]="linkCard"></app-site-card>
+</div>
 
 <div class="content" role="main">
   <!-- Links -->
