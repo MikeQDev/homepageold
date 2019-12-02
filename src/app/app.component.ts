@@ -9,45 +9,86 @@ export class AppComponent implements OnInit {
   title = 'homepage';
   sortBySite = true;
 
-  linkCards = [
+  linkCards = [];
+
+  links = [
+    { text: "entr", url: "https://www.reddit.com/r/Entrepreneur/", site: "Reddit", category: "Business" },
+    { text: "fi", url: "https://www.reddit.com/r/financialindependence/", site: "Reddit", category: "Finance" },
+
+    { text: "growth", url: "https://www.youtube.com/user/phuckmediocrity/videos", site: "YouTube", category: "Growth" },
+    { text: "money", url: "https://www.youtube.com/channel/UCYT-aXiAB-s9xf6cFcXCnNg/videos", site: "YouTube", category: "Finance" },
+
+    { text: "biz", url: "https://boards.4channel.org/biz/catalog", site: "Misc.", category: "Business" },
+    { text: "lit", url: "https://boards.4channel.org/lit/catalog", site: "Misc.", category: "Time waster" },
+    { text: "pol", url: "https://boards.4channel.org/pol/catalog", site: "Misc.", category: "Time waster" },
+    { text: "g", url: "https://boards.4channel.org/g/catalog", site: "Misc.", category: "Time waster" },
+    { text: "b", url: "https://boards.4channel.org/b/catalog", site: "Misc.", category: "Time waster" }
+  ];
+
+  bySite = [
     {
       title: 'Reddit',
       subtitle: 'Reddit',
       avatarUrl: 'assets/reddit-icon.svg',
-      links: [
-        { text: "entr", url: "https://www.reddit.com/r/Entrepreneur/", site: "Reddit", category: "Business" },
-        { text: "fi", url: "https://www.reddit.com/r/financialindependence/", site: "Reddit", category: "Finance" }
-      ]
+      links: []
     },
     {
       title: 'YouTube',
       subtitle: 'Easy watching',
       avatarUrl: 'assets/youtube-icon.svg',
-      links: [
-        { text: "growth", url: "https://www.youtube.com/user/phuckmediocrity/videos", site: "YouTube", category: "Growth" },
-        { text: "money", url: "https://www.youtube.com/channel/UCYT-aXiAB-s9xf6cFcXCnNg/videos", site: "YouTube", category: "Finance" }
-      ]
+      links: []
     },
     {
       title: 'Misc.',
       subtitle: 'Imageboards',
       avatarUrl: 'assets/clover-icon.svg',
-      links: [
-        { text: "biz", url: "https://boards.4channel.org/biz/catalog", site: "Misc.", category: "Business" },
-        { text: "lit", url: "https://boards.4channel.org/lit/catalog", site: "Misc.", category: "Time waster" },
-        { text: "pol", url: "https://boards.4channel.org/pol/catalog", site: "Misc.", category: "Time waster" },
-        { text: "g", url: "https://boards.4channel.org/g/catalog", site: "Misc.", category: "Time waster" },
-        { text: "b", url: "https://boards.4channel.org/b/catalog", site: "Misc.", category: "Time waster" }
-      ]
+      links: []
+    }
+  ];
+
+  byCategory = [
+    {
+      title: 'Time waster',
+      subtitle: 'Time waster',
+      avatarUrl: 'assets/reddit-icon.svg',
+      links: []
+    },
+    {
+      title: 'Business',
+      subtitle: 'Business',
+      avatarUrl: 'assets/youtube-icon.svg',
+      links: []
+    },
+    {
+      title: 'Finance',
+      subtitle: 'Finance',
+      avatarUrl: 'assets/clover-icon.svg',
+      links: []
+    },
+    {
+      title: 'Growth',
+      subtitle: 'Growth',
+      avatarUrl: 'assets/clover-icon.svg',
+      links: []
     }
   ];
 
   toggleSortBySite(toggled) {
     this.sortBySite = toggled;
-    // this.linkCards = [];
+    if (this.sortBySite) {
+      this.linkCards = this.bySite;
+    } else {
+      this.linkCards = this.byCategory;
+    }
   }
 
   ngOnInit(): void {
+    this.byCategory.forEach(c => {
+      c.links = this.links.filter(l => c.title === l.category);
+    });
+    this.bySite.forEach(s => {
+      s.links = this.links.filter(l => s.title === l.site);
+    });
     this.toggleSortBySite(this.sortBySite);
   }
 }
