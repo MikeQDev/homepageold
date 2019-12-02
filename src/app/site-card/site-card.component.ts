@@ -10,7 +10,7 @@ export class SiteCardComponent {
   public horizontal = true;
 
   @Input()
-  public card = {
+  public card: any = {
     avatarUrl: "https://www.infragistics.com/angular-demos/assets/images/card/avatars/mellow_d.jpg",
     links: [
       { text: "google", url: "https://google.com/" },
