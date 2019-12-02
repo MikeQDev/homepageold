@@ -48,27 +48,27 @@ export class AppComponent implements OnInit {
 
   byCategory = [
     {
-      title: 'Time waster',
-      subtitle: 'Time waster',
-      avatarUrl: 'assets/reddit-icon.svg',
-      links: []
-    },
-    {
       title: 'Business',
       subtitle: 'Business',
-      avatarUrl: 'assets/youtube-icon.svg',
+      avatarUrl: 'assets/briefcase-icon.svg',
       links: []
     },
     {
       title: 'Finance',
       subtitle: 'Finance',
-      avatarUrl: 'assets/clover-icon.svg',
+      avatarUrl: 'assets/moneybag-icon.svg',
       links: []
     },
     {
       title: 'Growth',
       subtitle: 'Growth',
-      avatarUrl: 'assets/clover-icon.svg',
+      avatarUrl: 'assets/muscle-icon.svg',
+      links: []
+    },
+    {
+      title: 'Time waster',
+      subtitle: 'Time waster',
+      avatarUrl: 'assets/clockfire-icon.svg',
       links: []
     }
   ];
