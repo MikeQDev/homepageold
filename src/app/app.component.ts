@@ -42,4 +42,8 @@ export class AppComponent {
     }
   ];
 
+  toggleSortBySite(toggled) {
+    console.log(toggled);
+  }
+
 }
