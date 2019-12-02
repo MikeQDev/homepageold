@@ -9,9 +9,9 @@ export class AppComponent implements OnInit {
   title = 'homepage';
   sortBySite = true;
 
-  linkCards = [];
+  linkCards: any[] = [];
 
-  links = [
+  links: any[] = [
     { text: "entr", url: "https://www.reddit.com/r/Entrepreneur/", site: "Reddit", category: "Business" },
     { text: "fi", url: "https://www.reddit.com/r/financialindependence/", site: "Reddit", category: "Finance" },
 
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     { text: "b", url: "https://boards.4channel.org/b/catalog", site: "Misc.", category: "Time waster" }
   ];
 
-  bySite = [
+  bySite: any[] = [
     {
       title: 'Reddit',
       subtitle: 'Reddit',
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  byCategory = [
+  byCategory: any[] = [
     {
       title: 'Business',
       subtitle: 'Business',
@@ -83,10 +83,16 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.links.forEach(l => {
+      l.linkSiteAvatarUrl = this.bySite.filter(s => s.title === l.site)[0].avatarUrl;
+      l.linkCategoryAvatarUrl = this.byCategory.filter(c => c.title === l.category)[0].avatarUrl;
+    });
     this.byCategory.forEach(c => {
+      c.displaySiteIcon = true;
       c.links = this.links.filter(l => c.title === l.category);
     });
     this.bySite.forEach(s => {
+      s.displayCategoryIcon = true;
       s.links = this.links.filter(l => s.title === l.site);
     });
     this.toggleSortBySite(this.sortBySite);
