@@ -35,7 +35,7 @@
 
   </a>
 </div>-->
-
+<mat-slide-toggle [checked]="!sortBySite" style="position:absolute;right:15px;"></mat-slide-toggle>
 <div class="card-container">
   <app-site-card *ngFor="let linkCard of linkCards" [card]="linkCard"></app-site-card>
 </div>
