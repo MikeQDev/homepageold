@@ -10,9 +10,9 @@ export class AppComponent {
 
   linkCards = [
     {
-      title: 'catA',
+      title: 'Reddit',
       subtitle: 'catA sub',
-      avatarUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/avatars/mellow_d.jpg',
+      avatarUrl: 'assets/reddit-icon.svg',
       links: [
         { text: "google", url: "https://google.com/" },
         { text: "reddit", url: "https://reddit.com/" }
@@ -21,7 +21,16 @@ export class AppComponent {
     {
       title: 'catB',
       subtitle: 'catB sub',
-      avatarUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/avatars/mellow_d.jpg',
+      avatarUrl: 'assets/youtube-icon.svg',
+      links: [
+        { text: "google", url: "https://google.com/" },
+        { text: "reddit", url: "https://reddit.com/" }
+      ]
+    },
+    {
+      title: 'catB',
+      subtitle: 'catB sub',
+      avatarUrl: 'assets/clover-icon.svg',
       links: [
         { text: "google", url: "https://google.com/" },
         { text: "reddit", url: "https://reddit.com/" }

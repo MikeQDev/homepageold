@@ -1,3 +1,7 @@
-.custom-card{
+.custom-card {
     margin: 10px;
+}
+
+.igx-avatar {
+    background-color: white;
 }
