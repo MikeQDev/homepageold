@@ -11,10 +11,10 @@ export class AppComponent {
   linkCards = [
     {
       title: 'Reddit',
-      subtitle: 'catA sub',
+      subtitle: 'Reddit',
       avatarUrl: 'assets/reddit-icon.svg',
       links: [
-        { text: "entrepreneur", url: "https://www.reddit.com/r/Entrepreneur/" },
+        { text: "entr", url: "https://www.reddit.com/r/Entrepreneur/" },
         { text: "fi", url: "https://www.reddit.com/r/financialindependence/" }
       ]
     },
