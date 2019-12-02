@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'homepage';
   sortBySite = true;
+  displayLinkIcons = true;
 
   linkCards: any[] = [];
 
@@ -80,6 +81,14 @@ export class AppComponent implements OnInit {
     } else {
       this.linkCards = this.byCategory;
     }
+    this.toggleLinkIcons(this.displayLinkIcons);
+  }
+
+  toggleLinkIcons(toggled) {
+    this.displayLinkIcons = toggled;
+    this.linkCards.forEach(l => {
+      l.displayLinkIcon = this.displayLinkIcons;
+    });
   }
 
   ngOnInit(): void {

@@ -9,8 +9,10 @@
 
             <igx-card-content>
                 <button *ngFor="let link of card.links;" igxButton="flat" igxRipple (click)="newTab(link)">
-                    <img *ngIf="card.displaySiteIcon" src="{{ link.linkSiteAvatarUrl }}" />
-                    <img *ngIf="card.displayCategoryIcon" src="{{ link.linkCategoryAvatarUrl }}" />
+                    <div *ngIf="card.displayLinkIcon">
+                        <img *ngIf="card.displaySiteIcon" src="{{ link.linkSiteAvatarUrl }}" />
+                        <img *ngIf="card.displayCategoryIcon" src="{{ link.linkCategoryAvatarUrl }}" />
+                    </div>
                     {{link.text}}
                 </button>
             </igx-card-content>
