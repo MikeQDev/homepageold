@@ -23,7 +23,8 @@ export class AppComponent implements OnInit {
     { text: "lit", url: "https://boards.4channel.org/lit/catalog", site: "Misc.", category: "Time waster" },
     { text: "pol", url: "https://boards.4channel.org/pol/catalog", site: "Misc.", category: "Time waster" },
     { text: "g", url: "https://boards.4channel.org/g/catalog", site: "Misc.", category: "Time waster" },
-    { text: "b", url: "https://boards.4channel.org/b/catalog", site: "Misc.", category: "Time waster" }
+    { text: "b", url: "https://boards.4channel.org/b/catalog", site: "Misc.", category: "Time waster" },
+    { text: "out", url: "https://boards.4channel.org/out/catalog", site: "Misc.", category: "Time waster" }
   ];
 
   bySite: any[] = [
