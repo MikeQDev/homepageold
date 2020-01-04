@@ -1,5 +1,14 @@
 # Homepage
 
+## Updating card links
+
+``
+
+Adding/modifying links: `/src/app/app.component.ts`
+
+Icons: https://www.flaticon.com/
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server

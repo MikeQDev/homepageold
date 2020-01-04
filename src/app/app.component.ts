@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 
     { text: "growth", url: "https://www.youtube.com/user/phuckmediocrity/videos", site: "YouTube", category: "Growth" },
     { text: "money", url: "https://www.youtube.com/channel/UCYT-aXiAB-s9xf6cFcXCnNg/videos", site: "YouTube", category: "Finance" },
+    { text: "TechLead", url: "https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw/videos", site: "YouTube", category: "Tech" },
 
     { text: "biz", url: "https://boards.4channel.org/biz/catalog", site: "Misc.", category: "Business" },
     { text: "lit", url: "https://boards.4channel.org/lit/catalog", site: "Misc.", category: "Time waster" },
@@ -71,6 +72,12 @@ export class AppComponent implements OnInit {
       title: 'Time waster',
       subtitle: 'Time waster',
       avatarUrl: 'assets/clockfire-icon.svg',
+      links: []
+    },
+    {
+      title: 'Tech',
+      subtitle: 'Technology',
+      avatarUrl: 'assets/workstation-icon.svg',
       links: []
     }
   ];
