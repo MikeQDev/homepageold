@@ -7,7 +7,7 @@
                 <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
             </igx-card-header>
 
-            <igx-card-content>
+            <igx-card-content *ngIf="card.links[0].text">
                 <button *ngFor="let link of card.links;" igxButton="flat" igxRipple (click)="newTab(link)">
                     <div *ngIf="card.displayLinkIcon">
                         <img *ngIf="card.displaySiteIcon" src="{{ link.linkSiteAvatarUrl }}" />
@@ -15,6 +15,14 @@
                     </div>
                     {{link.text}}
                 </button>
+            </igx-card-content>
+
+            <igx-card-content *ngIf="card.links[0].radioStreamUrl">
+                <div style="text-align: center;">
+                    <audio controls="controls">
+                        <source src="{{card.links[0].radioStreamUrl}}"/>
+                    </audio>
+                </div>
             </igx-card-content>
 
             <!--<igx-card-actions [vertical]="false">
