@@ -9,8 +9,8 @@ Icons: https://www.flaticon.com/
 
 ## Todo
 
--Make larger card icons fit instead of cut
--Custom audio player to remove unusable seek bar (`background-size: contain` ? But `!important` isn't overriding)
+- Make larger card icons fit instead of cut
+- Custom audio player to remove unusable seek bar (`background-size: contain` ? But `!important` isn't overriding)
 
 ## Project info
 
