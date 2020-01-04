@@ -32,19 +32,19 @@ export class AppComponent implements OnInit {
     {
       title: 'Reddit',
       subtitle: 'Reddit',
-      avatarUrl: 'assets/reddit-icon.svg',
+      avatarUrl: 'assets/icons/reddit-icon.svg',
       links: []
     },
     {
       title: 'YouTube',
       subtitle: 'Easy watching',
-      avatarUrl: 'assets/youtube-icon.svg',
+      avatarUrl: 'assets/icons/youtube-icon.svg',
       links: []
     },
     {
       title: 'Misc.',
       subtitle: 'Imageboards',
-      avatarUrl: 'assets/clover-icon.svg',
+      avatarUrl: 'assets/icons/clover-icon.svg',
       links: []
     }
   ];
@@ -53,31 +53,31 @@ export class AppComponent implements OnInit {
     {
       title: 'Business',
       subtitle: 'Business',
-      avatarUrl: 'assets/briefcase-icon.svg',
+      avatarUrl: 'assets/icons/briefcase-icon.svg',
       links: []
     },
     {
       title: 'Finance',
       subtitle: 'Finance',
-      avatarUrl: 'assets/moneybag-icon.svg',
+      avatarUrl: 'assets/icons/moneybag-icon.svg',
       links: []
     },
     {
       title: 'Growth',
       subtitle: 'Growth',
-      avatarUrl: 'assets/muscle-icon.svg',
+      avatarUrl: 'assets/icons/muscle-icon.svg',
       links: []
     },
     {
       title: 'Time waster',
       subtitle: 'Time waster',
-      avatarUrl: 'assets/clockfire-icon.svg',
+      avatarUrl: 'assets/icons/clockfire-icon.svg',
       links: []
     },
     {
       title: 'Tech',
       subtitle: 'Technology',
-      avatarUrl: 'assets/workstation-icon.svg',
+      avatarUrl: 'assets/icons/workstation-icon.svg',
       links: []
     }
   ];
