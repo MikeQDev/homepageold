@@ -4,6 +4,7 @@
 
 .igx-avatar {
     background-color: white;
+    background-size: contain !important;
 }
 
 button img{
