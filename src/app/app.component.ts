@@ -82,6 +82,28 @@ export class AppComponent implements OnInit {
     }
   ];
 
+  radioCards: any[] = [];
+
+  radioLinks: any[] = [
+    { title: '99.1', subtitle: 'PLR', url: "https://16923.live.streamtheworld.com/WPLRFMAAC.aac", image: 'https://express-images.franklymedia.com/5829/sites/14/2017/12/08142713/logo_wplr1.png' },
+    { title: '104.1', subtitle: 'WMRQ', url: "https://crystalout.surfernetwork.com:8001/WMRQ_MP3", image: 'https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1110/2019/02/26133643/WMRQ%402x.png' },
+    { title: '93.7', subtitle: 'HOT', url: "https://17443.live.streamtheworld.com/WZMXFM_SC?sbmid=6a516b9a-2fae-45d1-9ba5-d9957d2c23f0", image: 'https://images.radio.com/wzmxfm/general/WZMX_Header_Large_Logo.png' }, // <-REQUIRES SESION ID...
+  ]
+
+  setupRadio() {
+    this.radioCards = this.radioLinks.map(r => {
+      return {
+        title: r.title,
+        subtitle: r.subtitle,
+        avatarUrl: r.image,
+        links: [{
+          radioStreamUrl: r.url
+        }]
+      }
+    });
+
+  }
+
   toggleSortBySite(toggled) {
     this.sortBySite = toggled;
     if (this.sortBySite) {
@@ -113,5 +135,7 @@ export class AppComponent implements OnInit {
       s.links = this.links.filter(l => s.title === l.site);
     });
     this.toggleSortBySite(this.sortBySite);
+    this.setupRadio();
+    console.log(this.linkCards);
   }
 }
