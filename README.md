@@ -1,13 +1,18 @@
 # Homepage
 
+
 ## Updating card links
 
-``
-
-Adding/modifying links: `/src/app/app.component.ts`
+Adding/modifying links/radio stations: `/src/app/app.component.ts`
 
 Icons: https://www.flaticon.com/
 
+## Todo
+
+-Make larger card icons fit instead of cut
+-Custom audio player to remove unusable seek bar (`background-size: contain` ? But `!important` isn't overriding)
+
+## Project info
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
