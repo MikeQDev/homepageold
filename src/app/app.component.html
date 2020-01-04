@@ -59,9 +59,6 @@
   <mat-slide-toggle (change)="toggleLinkIcons($event.checked)" [checked]="displayLinkIcons"></mat-slide-toggle>
 
 
-  <div class="card-container">
-    <app-site-card *ngFor="let radioCard of radioCards" [card]="radioCard"></app-site-card>
-  </div>
   <!-- Footer -->
   <!--<footer>
   </footer>-->
@@ -75,6 +72,9 @@
 
 </div>
 
+<div class="card-container">
+  <app-site-card *ngFor="let radioCard of radioCards" [card]="radioCard"></app-site-card>
+</div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
