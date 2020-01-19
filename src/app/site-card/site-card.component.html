@@ -7,7 +7,7 @@
                 <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
             </igx-card-header>
 
-            <igx-card-content *ngIf="card.links[0].text">
+            <igx-card-content *ngIf="card.cardType==='website'">
                 <button *ngFor="let link of card.links;" igxButton="flat" igxRipple (click)="newTab(link)">
                     <div *ngIf="card.displayLinkIcon">
                         <img *ngIf="card.displaySiteIcon" src="{{ link.linkSiteAvatarUrl }}" />
@@ -18,7 +18,7 @@
             </igx-card-content>
 
             <!-- one radio per card-->
-            <igx-card-content *ngIf="card.links[0].radioStreamUrl">
+            <igx-card-content *ngIf="card.cardType==='radio'">
                 <div class="radioSource" *ngFor="let radioLink of card.links" style="text-align: center;">
                     <img src="{{radioLink.avatarUrl}}" />
                     <audio controls="controls">

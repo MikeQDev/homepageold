@@ -82,11 +82,7 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  radioCards: any = {
-    title: 'Radio',
-    subtitle: 'Music',
-    avatarUrl: 'https://express-images.franklymedia.com/5829/sites/14/2017/12/08142713/logo_wplr1.png'
-  };
+  radioCards: any[] = [];
   //singleRadioCard: any[] = [];
 
   radioLinks: any[] = [
@@ -96,24 +92,22 @@ export class AppComponent implements OnInit {
   ]
 
   setupRadio() {
-    this.radioCards.links = this.radioLinks.map(r => {
-      return {
-        title: r.title,
-        subtitle: r.subtitle,
-        avatarUrl: r.image,
-        radioStreamUrl: r.url
-      }
-    });
-
-    /*
-    this.singleRadioCard = this.radioLinks.map(r => {
-      return {
+    this.radioCards = [
+      {
         title: 'Radio',
         subtitle: 'Music',
-        singleRadioLinks
+        avatarUrl: 'assets/icons/music.svg',
+        cardType: 'radio',
+        links: this.radioLinks.map(r => {
+          return {
+            title: r.title,
+            subtitle: r.subtitle,
+            avatarUrl: r.image,
+            radioStreamUrl: r.url
+          }
+        })
       }
-    });*/
-    console.log(this.radioCards);
+    ];
   }
 
   toggleSortBySite(toggled) {
@@ -133,7 +127,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  setupWebsites() {
     this.links.forEach(l => {
       l.linkSiteAvatarUrl = this.bySite.filter(s => s.title === l.site)[0].avatarUrl;
       l.linkCategoryAvatarUrl = this.byCategory.filter(c => c.title === l.category)[0].avatarUrl;
@@ -141,14 +135,20 @@ export class AppComponent implements OnInit {
     this.byCategory.forEach(c => {
       c.displaySiteIcon = true;
       c.links = this.links.filter(l => c.title === l.category);
+      c.cardType = 'website';
     });
     this.bySite.forEach(s => {
       s.displayCategoryIcon = true;
       s.links = this.links.filter(l => s.title === l.site);
+      s.cardType = 'website';
     });
     this.toggleSortBySite(this.sortBySite);
+
+  }
+  ngOnInit(): void {
+    this.setupWebsites();
     this.setupRadio();
     console.log(this.linkCards);
-    console.log(this.byCategory)
+    console.log(this.radioCards);
   }
 }
