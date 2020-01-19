@@ -17,10 +17,12 @@
                 </button>
             </igx-card-content>
 
+            <!-- one radio per card-->
             <igx-card-content *ngIf="card.links[0].radioStreamUrl">
-                <div style="text-align: center;">
+                <div class="radioSource" *ngFor="let radioLink of card.links" style="text-align: center;">
+                    <img src="{{radioLink.avatarUrl}}" />
                     <audio controls="controls">
-                        <source src="{{card.links[0].radioStreamUrl}}" />
+                        <source src="{{radioLink.radioStreamUrl}}" />
                     </audio>
                 </div>
             </igx-card-content>
