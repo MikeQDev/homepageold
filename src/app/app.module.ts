@@ -19,7 +19,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     IgxButtonModule,
     IgxCardModule,
     IgxRippleModule,
-    MatSlideToggleModule],
+    MatSlideToggleModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
