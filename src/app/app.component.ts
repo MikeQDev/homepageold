@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'homepage';
-  sortBySite = true;
+  sortBySite = false;
   displayLinkIcons = true;
 
   linkCards: any[] = [];
