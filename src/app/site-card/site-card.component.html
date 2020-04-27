@@ -2,7 +2,7 @@
     <igx-card [horizontal]="horizontal">
         <div igxLayout igxLayoutDir="column" igxFlex igxFlexGrow="1">
             <igx-card-header>
-                <igx-avatar [src]="card.avatarUrl"></igx-avatar>
+                <igx-avatar [src]="card.avatarUrl" (click)="openAll()"></igx-avatar>
                 <h5 igxCardHeaderTitle>{{card.title}}</h5>
                 <h5 igxCardHeaderSubtitle>{{card.subtitle}}</h5>
             </igx-card-header>

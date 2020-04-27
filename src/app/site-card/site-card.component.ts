@@ -15,4 +15,10 @@ export class SiteCardComponent {
   newTab(e) {
     window.open(e.url);
   }
+
+  openAll() {
+    // NOTE: must have popup blocker off for your site
+    // in order for this to open multiple tabs at once
+    this.card.links.forEach(l => { this.newTab(l) });
+  }
 }
