@@ -20,14 +20,15 @@ export class AppComponent implements OnInit {
     { text: "money", url: "https://www.youtube.com/channel/UCYT-aXiAB-s9xf6cFcXCnNg/videos", site: "YouTube", category: "Finance" },
     { text: "TechLead", url: "https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw/videos", site: "YouTube", category: "Tech" },
     { text: "Engineering", url: "https://www.youtube.com/user/gradyhillhouse/videos", site: "YouTube", category: "Growth" },
-    { text: "CodeDrip", url: "https://www.youtube.com/channel/UCRLEADhMcb8WUdnQ5_Alk7g", site: "YouTube", category: "Tech" },
+    { text: "CodeDrip", url: "https://www.youtube.com/channel/UCRLEADhMcb8WUdnQ5_Alk7g/videos", site: "YouTube", category: "Tech" },
 
     { text: "biz", url: "https://boards.4channel.org/biz/catalog", site: "Misc.", category: "Business" },
     { text: "lit", url: "https://boards.4channel.org/lit/catalog", site: "Misc.", category: "Time waster" },
     { text: "pol", url: "https://boards.4channel.org/pol/catalog", site: "Misc.", category: "Time waster" },
     { text: "g", url: "https://boards.4channel.org/g/catalog", site: "Misc.", category: "Time waster" },
     { text: "b", url: "https://boards.4channel.org/b/catalog", site: "Misc.", category: "Time waster" },
-    { text: "out", url: "https://boards.4channel.org/out/catalog", site: "Misc.", category: "Time waster" }
+    { text: "out", url: "https://boards.4channel.org/out/catalog", site: "Misc.", category: "Time waster" },
+    { text: "diy", url: "https://boards.4channel.org/diy/catalog", site: "Misc.", category: "Time waster" }
   ];
 
   bySite: any[] = [
